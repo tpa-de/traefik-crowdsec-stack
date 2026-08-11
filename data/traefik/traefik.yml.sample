@@ -9,12 +9,14 @@ certificatesResolvers:
   http_resolver:
     acme:
       email: "deine@email.de"
+      caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
       storage: "/etc/traefik/acme_letsencrypt.json"
       httpChallenge:
         entryPoint: web
   tls_resolver:
     acme:
       email: "deine@email.de"
+      caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
       storage: "/etc/traefik/tls_letsencrypt.json"
       tlsChallenge: {}
 
