@@ -24,7 +24,7 @@ services:
       traefik.http.routers.traefik-dashboard.tls: "true"
       traefik.http.routers.traefik-dashboard.tls.certresolver: dns_cloudflare
       traefik.http.routers.traefik-dashboard.tls.domains[0].main: "${DOMAIN:-yourdomain.com}"
-      traefik.http.routers.traefik-dashboard.tls.domains[1].main: "*.${DOMAIN:-yourdomain.com}"
+      traefik.http.routers.traefik-dashboard.tls.domains[0].sans: "*.${DOMAIN:-yourdomain.com}"
       traefik.http.services.traefik-dashboard.loadbalancer.sticky.cookie.httpOnly: "true"
       traefik.http.services.traefik-dashboard.loadbalancer.sticky.cookie.secure: "true"
       traefik.http.routers.pingweb.rule: PathPrefix(`/ping`)
