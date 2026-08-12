@@ -17,7 +17,7 @@ step_done() {
 }
 
 # Gesamtschritte für das Skript festlegen
-total_steps=18
+total_steps=19
 current_step=1
 
 # Setze das Arbeitsverzeichnis auf das Verzeichnis, in dem das Skript liegt
